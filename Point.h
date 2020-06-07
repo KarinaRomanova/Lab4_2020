@@ -65,6 +65,6 @@ public:
             current->next = nd;
         }
     }
-    friend bool operator== (const List& FirstPoint, const List& SecondPoint);
+   
  
 };
