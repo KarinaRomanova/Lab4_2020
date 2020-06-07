@@ -5,7 +5,7 @@ using namespace std;
 
 class Point
 {
-private:
+protected:
 	long double x;
 	long double y;
 	long double z;
@@ -29,4 +29,42 @@ public:
 	friend std::ostream& operator<< (std::ostream& out, Point& point);
 
 	void SetNewCoord();
+};
+struct Node
+{
+    Point point;
+    Node* next;
+};
+
+class List
+{
+private:
+  
+
+
+public:  
+    Node* head; 
+    List() 
+    {
+        head = NULL;
+    }
+    void addNode(Point _point)
+    {
+        Node* nd = new Node; 
+
+        nd->point = _point;        
+        nd->next = NULL;    
+
+        if (head == NULL)    
+            head = nd;
+        else           
+        {
+            Node* current = head;    
+            while (current->next != NULL)
+            current = current->next;
+            current->next = nd;
+        }
+    }
+    friend bool operator== (const List& FirstPoint, const List& SecondPoint);
+ 
 };

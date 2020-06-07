@@ -40,6 +40,8 @@ bool operator== (const Point& FirstPoint, const Point& SecondPoint)
 	return (FirstPoint.x == SecondPoint.x && FirstPoint.y == SecondPoint.y && FirstPoint.z == SecondPoint.z);
 
 }
+
+
 bool operator!= (const Point& FirstPoint, const Point& SecondPoint)
 {
 	return !(FirstPoint == SecondPoint);
