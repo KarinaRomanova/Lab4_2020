@@ -59,3 +59,20 @@ void Point::SetNewCoord() {
 	cout << "\tz = ";		cin >> z;
 	Point point(this->x, this->y, this->z);
 }
+ void List::  addNode(Point _point)
+{
+	Node* nd = new Node;
+
+	nd->point = _point;
+	nd->next = NULL;
+
+	if (head == NULL)
+		head = nd;
+	else
+	{
+		Node* current = head;
+		while (current->next != NULL)
+			current = current->next;
+		current->next = nd;
+	}
+};

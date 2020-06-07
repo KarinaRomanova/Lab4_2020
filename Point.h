@@ -38,33 +38,11 @@ struct Node
 
 class List
 {
-private:
-  
-
-
 public:  
     Node* head; 
     List() 
     {
         head = NULL;
     }
-    void addNode(Point _point)
-    {
-        Node* nd = new Node; 
-
-        nd->point = _point;        
-        nd->next = NULL;    
-
-        if (head == NULL)    
-            head = nd;
-        else           
-        {
-            Node* current = head;    
-            while (current->next != NULL)
-            current = current->next;
-            current->next = nd;
-        }
-    }
-   
- 
+	void addNode(Point _point); 
 };
